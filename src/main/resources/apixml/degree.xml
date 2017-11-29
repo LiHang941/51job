@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--学历-->
+<responsemessage>
+    <result>1</result>
+    <resultbody>
+        <filtertype>degree</filtertype>
+        <totalcount>6</totalcount>
+        <item>
+            <code>01</code>
+            <value>初中及以下</value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>02</code>
+            <value>高中/中技/中专</value>
+            <jobcount>8</jobcount>
+        </item>
+        <item>
+            <code>03</code>
+            <value>大专</value>
+            <jobcount>299</jobcount>
+        </item>
+        <item>
+            <code>04</code>
+            <value>本科</value>
+            <jobcount>414</jobcount>
+        </item>
+        <item>
+            <code>05</code>
+            <value>硕士</value>
+            <jobcount>11</jobcount>
+        </item>
+        <item>
+            <code>06</code>
+            <value>博士</value>
+            <jobcount>1</jobcount>
+        </item>
+    </resultbody>
+</responsemessage>

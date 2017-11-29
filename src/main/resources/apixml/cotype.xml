@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<responsemessage>
+    <result>1</result>
+    <resultbody>
+        <filtertype>
+            <![CDATA[ cotype ]]>
+        </filtertype>
+        <totalcount>11</totalcount>
+        <item>
+            <code>01</code>
+            <value>
+                <![CDATA[ 外资（欧美） ]]>
+            </value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>02</code>
+            <value>
+                <![CDATA[ 外资（非欧美） ]]>
+            </value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>03</code>
+            <value>
+                <![CDATA[ 合资 ]]>
+            </value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>04</code>
+            <value>
+                <![CDATA[ 国企 ]]>
+            </value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>05</code>
+            <value>
+                <![CDATA[ 民营公司 ]]>
+            </value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>06</code>
+            <value>
+                <![CDATA[ 外企代表处 ]]>
+            </value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>07</code>
+            <value>
+                <![CDATA[ 政府机关 ]]>
+            </value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>08</code>
+            <value>
+                <![CDATA[ 事业单位 ]]>
+            </value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>09</code>
+            <value>
+                <![CDATA[ 非营利机构 ]]>
+            </value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>10</code>
+            <value>
+                <![CDATA[ 上市公司 ]]>
+            </value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>11</code>
+            <value>
+                <![CDATA[ 创业公司 ]]>
+            </value>
+            <jobcount>0</jobcount>
+        </item>
+    </resultbody>
+</responsemessage>

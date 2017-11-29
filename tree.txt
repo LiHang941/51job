@@ -1,0 +1,68 @@
+\---src
+    +---main
+    |   +---java
+    |   |   \---xyz
+    |   |       \---lihang
+    |   |           \---utils
+    |   |               \---job
+    |   |                   |   ConfigUtils.java	     配置读取类
+    |   |                   |   Main.java                    启动
+    |   |                   |
+    |   |                   +---db
+    |   |                   |   |   DbFactory.java            
+    |   |                   |   |
+    |   |                   |   +---dto
+    |   |                   |   |       BaseDto.java
+    |   |                   |   |       JobInfo.java
+    |   |                   |   |       Resultbody.java
+    |   |                   |   |
+    |   |                   |   +---entity
+    |   |                   |   |       Job.java
+    |   |                   |   |       Position.java
+    |   |                   |   |
+    |   |                   |   \---mapper
+    |   |                   |           JobMapper.java
+    |   |                   |           PositionMapper.java
+    |   |                   |
+    |   |                   +---service
+    |   |                   |       ApiConverterUtil.java
+    |   |                   |       JobApiService.java
+    |   |                   |       JobHtmlService.java
+    |   |                   |       ParseHtmlConverterUtil.java
+    |   |                   |       RetrofitServiceFactory.java
+    |   |                   |
+    |   |                   \---tool
+    |   |                           BeanCopyUtil.java
+    |   |                           XMLUtil.java
+    |   |
+    |   \---resources
+    |       |   config.properties
+    |       |   Log4j2.xml
+    |       |   regex.txt
+    |       |
+    |       +---apixml                 	``Api筛选条件数据
+    |       |       cosize.xml
+    |       |       degree.xml
+    |       |       issuedate.xml
+    |       |       saltype.xml
+    |       |       workyear.xml
+    |       |
+    |       \---mybatis
+    |           |   CreateTable.sql     ``开始务必执行CreateTable.sql
+    |           |   db.properties	``务必配置数据库连接配置
+    |           |   mybatis-config.xml
+    |           |   select.sql
+    |           |
+    |           \---mapper
+    |                   JobMapper.xml
+    |                   PositionMapper.xml
+    |
+    \---test
+        \---java
+            \---xyz
+                \---lihang
+                    \---utils
+                        \---job
+                            \---test
+                                    MyBatisTest.java
+                                    XmlParseTest.java

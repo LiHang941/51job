@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--工作时间-->
+<responsemessage>
+    <result>1</result>
+    <resultbody>
+        <filtertype><![CDATA[workyear]]></filtertype>
+        <totalcount>5</totalcount>
+        <item>
+            <code>01</code>
+            <value><![CDATA[无经验]]></value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>02</code>
+            <value><![CDATA[1-3年]]></value>
+            <jobcount>1</jobcount>
+        </item>
+        <item>
+            <code>03</code>
+            <value><![CDATA[3-5年]]></value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>04</code>
+            <value><![CDATA[5-10年]]></value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>05</code>
+            <value><![CDATA[10年以上]]></value>
+            <jobcount>0</jobcount>
+        </item>
+    </resultbody>
+</responsemessage>

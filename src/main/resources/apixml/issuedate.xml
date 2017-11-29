@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--时间-->
+<responsemessage>
+    <result>1</result>
+    <resultbody>
+        <filtertype><![CDATA[issuedate]]></filtertype>
+        <totalcount>4</totalcount>
+        <item>
+            <code>0</code>
+            <value><![CDATA[24小时内]]></value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>1</code>
+            <value><![CDATA[近三天]]></value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>2</code>
+            <value><![CDATA[近一周]]></value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>3</code>
+            <value><![CDATA[近一月]]></value>
+            <jobcount>1</jobcount>
+        </item>
+    </resultbody>
+</responsemessage>

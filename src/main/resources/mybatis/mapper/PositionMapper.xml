@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.lihang.utils.job.db.mapper.PositionMapper">
+  <resultMap id="BaseResultMap" type="xyz.lihang.utils.job.db.entity.Position">
+    <!--
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="position_name" jdbcType="VARCHAR" property="positionName" />
+    <result column="job_details_url" jdbcType="VARCHAR" property="jobDetailsUrl" />
+    <result column="company_name" jdbcType="VARCHAR" property="companyName" />
+    <result column="working_place" jdbcType="VARCHAR" property="workingPlace" />
+    <result column="salary" jdbcType="VARCHAR" property="salary" />
+    <result column="release_ime" jdbcType="DATE" property="releaseIme" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="all_positions_url" jdbcType="VARCHAR" property="allPositionsUrl" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--
+    -->
+    delete from `position`
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="xyz.lihang.utils.job.db.entity.Position">
+    <!--
+    -->
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into `position` (position_name, job_details_url, company_name, 
+      working_place, salary, release_ime, 
+      create_time, all_positions_url)
+    values (#{positionName,jdbcType=VARCHAR}, #{jobDetailsUrl,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, 
+      #{workingPlace,jdbcType=VARCHAR}, #{salary,jdbcType=VARCHAR}, #{releaseIme,jdbcType=DATE}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{allPositionsUrl,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="xyz.lihang.utils.job.db.entity.Position">
+    <!--
+    -->
+    update `position`
+    set position_name = #{positionName,jdbcType=VARCHAR},
+      job_details_url = #{jobDetailsUrl,jdbcType=VARCHAR},
+      company_name = #{companyName,jdbcType=VARCHAR},
+      working_place = #{workingPlace,jdbcType=VARCHAR},
+      salary = #{salary,jdbcType=VARCHAR},
+      release_ime = #{releaseIme,jdbcType=DATE},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      all_positions_url = #{allPositionsUrl,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--
+    -->
+    select id, position_name, job_details_url, company_name, working_place, salary, release_ime, 
+    create_time, all_positions_url
+    from `position`
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    <!--
+    -->
+    select id, position_name, job_details_url, company_name, working_place, salary, release_ime, 
+    create_time, all_positions_url
+    from `position`
+  </select>
+</mapper>

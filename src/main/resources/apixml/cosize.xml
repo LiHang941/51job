@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--公司规模人数-->
+<responsemessage>
+    <result>1</result>
+    <resultbody>
+        <filtertype><![CDATA[cosize]]></filtertype>
+        <totalcount>7</totalcount>
+        <item>
+            <code>01</code>
+            <value><![CDATA[少于50人]]></value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>02</code>
+            <value><![CDATA[50-150人]]></value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>03</code>
+            <value><![CDATA[150-500人]]></value>
+            <jobcount>1</jobcount>
+        </item>
+        <item>
+            <code>04</code>
+            <value><![CDATA[500-1000人]]></value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>05</code>
+            <value><![CDATA[1000-5000人]]></value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>06</code>
+            <value><![CDATA[5000-10000人]]></value>
+            <jobcount>0</jobcount>
+        </item>
+        <item>
+            <code>07</code>
+            <value><![CDATA[10000人以上]]></value>
+            <jobcount>0</jobcount>
+        </item>
+    </resultbody>
+</responsemessage>

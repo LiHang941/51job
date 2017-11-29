@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.lihang.utils.job.db.mapper.JobMapper">
+  <resultMap id="BaseResultMap" type="xyz.lihang.utils.job.db.entity.Job">
+    <!--
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="coid" jdbcType="BIGINT" property="coid" />
+    <result column="cddr" jdbcType="VARCHAR" property="cddr" />
+    <result column="coname" jdbcType="VARCHAR" property="coname" />
+    <result column="cotype" jdbcType="VARCHAR" property="cotype" />
+    <result column="jobid" jdbcType="BIGINT" property="jobid" />
+    <result column="jobarea" jdbcType="VARCHAR" property="jobarea" />
+    <result column="jobinfo" jdbcType="VARCHAR" property="jobinfo" />
+    <result column="jobname" jdbcType="VARCHAR" property="jobname" />
+    <result column="jobtype" jdbcType="VARCHAR" property="jobtype" />
+    <result column="degree" jdbcType="VARCHAR" property="degree" />
+    <result column="workyear" jdbcType="VARCHAR" property="workyear" />
+    <result column="providesalary" jdbcType="VARCHAR" property="providesalary" />
+    <result column="lastupdate" jdbcType="TIMESTAMP" property="lastupdate" />
+    <result column="issuedate" jdbcType="TIMESTAMP" property="issuedate" />
+    <result column="isintern" jdbcType="INTEGER" property="isintern" />
+    <result column="iscommunicate" jdbcType="INTEGER" property="iscommunicate" />
+    <result column="isurgency" jdbcType="INTEGER" property="isurgency" />
+    <result column="istop" jdbcType="INTEGER" property="istop" />
+    <result column="insert_flag_uuid" jdbcType="VARCHAR" property="insertFlagUuid" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--
+    -->
+    delete from `job`
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="xyz.lihang.utils.job.db.entity.Job">
+    <!--
+    -->
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into `job` (coid, cddr, coname, 
+      cotype, jobid, jobarea, 
+      jobinfo, jobname, jobtype, 
+      `degree`, workyear, providesalary, 
+      lastupdate, issuedate, isintern, 
+      iscommunicate, isurgency, istop, 
+      insert_flag_uuid)
+    values (#{coid,jdbcType=BIGINT}, #{cddr,jdbcType=VARCHAR}, #{coname,jdbcType=VARCHAR}, 
+      #{cotype,jdbcType=VARCHAR}, #{jobid,jdbcType=BIGINT}, #{jobarea,jdbcType=VARCHAR}, 
+      #{jobinfo,jdbcType=VARCHAR}, #{jobname,jdbcType=VARCHAR}, #{jobtype,jdbcType=VARCHAR}, 
+      #{degree,jdbcType=VARCHAR}, #{workyear,jdbcType=VARCHAR}, #{providesalary,jdbcType=VARCHAR}, 
+      #{lastupdate,jdbcType=TIMESTAMP}, #{issuedate,jdbcType=TIMESTAMP}, #{isintern,jdbcType=INTEGER}, 
+      #{iscommunicate,jdbcType=INTEGER}, #{isurgency,jdbcType=INTEGER}, #{istop,jdbcType=INTEGER}, 
+      #{insertFlagUuid,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="xyz.lihang.utils.job.db.entity.Job">
+    <!--
+    -->
+    update `job`
+    set coid = #{coid,jdbcType=BIGINT},
+      cddr = #{cddr,jdbcType=VARCHAR},
+      coname = #{coname,jdbcType=VARCHAR},
+      cotype = #{cotype,jdbcType=VARCHAR},
+      jobid = #{jobid,jdbcType=BIGINT},
+      jobarea = #{jobarea,jdbcType=VARCHAR},
+      jobinfo = #{jobinfo,jdbcType=VARCHAR},
+      jobname = #{jobname,jdbcType=VARCHAR},
+      jobtype = #{jobtype,jdbcType=VARCHAR},
+      `degree` = #{degree,jdbcType=VARCHAR},
+      workyear = #{workyear,jdbcType=VARCHAR},
+      providesalary = #{providesalary,jdbcType=VARCHAR},
+      lastupdate = #{lastupdate,jdbcType=TIMESTAMP},
+      issuedate = #{issuedate,jdbcType=TIMESTAMP},
+      isintern = #{isintern,jdbcType=INTEGER},
+      iscommunicate = #{iscommunicate,jdbcType=INTEGER},
+      isurgency = #{isurgency,jdbcType=INTEGER},
+      istop = #{istop,jdbcType=INTEGER},
+      insert_flag_uuid = #{insertFlagUuid,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--
+    -->
+    select id, coid, cddr, coname, cotype, jobid, jobarea, jobinfo, jobname, jobtype, 
+    `degree`, workyear, providesalary, lastupdate, issuedate, isintern, iscommunicate, 
+    isurgency, istop, insert_flag_uuid
+    from `job`
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    <!--
+    -->
+    select id, coid, cddr, coname, cotype, jobid, jobarea, jobinfo, jobname, jobtype, 
+    `degree`, workyear, providesalary, lastupdate, issuedate, isintern, iscommunicate, 
+    isurgency, istop, insert_flag_uuid
+    from `job`
+  </select>
+</mapper>
