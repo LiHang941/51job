@@ -1,13 +1,12 @@
 
 
-*   ##前程无忧数据抓取到本地工具
-    * 抓取前程无忧网站的招聘信息到本地数据库
-    * 方便数据二次筛选(培训机构/坑)
-    
-*  使用Demo
-    1. 初始配置导入/src/main/resources/mybatis/CreateTable.sql   
-    2. 配置数据库连接 /src/main/resources/mybatis/db.properties
-    3. 配置数据查询参数/src/main/resources/config.properties，见下方
+## 前程无忧数据抓取到本地工具
+* 抓取前程无忧网站的招聘信息到本地数据库
+* 方便数据二次筛选(培训机构/坑)    
+## 使用Demo
+1. 初始配置导入/src/main/resources/mybatis/CreateTable.sql   
+2. 配置数据库连接 /src/main/resources/mybatis/db.properties
+3. 配置数据查询参数/src/main/resources/config.properties，见下方
 
 ```
 #Api条件筛选
@@ -94,7 +93,7 @@ public class Main {
 
 ```
 
-*  资源说明
+*  ## 资源说明
 
 ```
     \---src
